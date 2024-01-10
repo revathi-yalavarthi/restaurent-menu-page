@@ -1,0 +1,125 @@
+body, html {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('bimg_out.jpeg') center/cover no-repeat fixed; /* Add your image path */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    width: 525px;
+    margin-top: 20px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-items {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1px;
+    background: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+    padding: 20px; /* Add padding to improve visibility of items */
+    border-radius: 0; /* Add rounded corners */
+    text-align: center;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f2f2f2;
+}
+
+
+
+.menu-item img {
+    max-width: 100px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-type,
+.item-name,
+.item-price {
+    margin-bottom: 5px;
+}
+
+.customer-info {
+    width: 100%;
+    max-width: 800px; /* Increase the max-width based on your preference */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1px;
+}
+
+.customer-info h2 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.customer-info label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.customer-info input,
+.customer-info textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.book-table {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.book-table:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    width: 525px;
+    margin-bottom: 10px;
+}

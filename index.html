@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Delicious Restaurant</h1>
+    </header>
+
+    <section id="menu-section">
+        <!-- Menu items block -->
+        <div class="menu-items">
+            <h2>Menu</h2>
+            <!-- Sample menu items with background colors and images -->
+            <div class="menu-item">
+                <div class="item-details">
+                    <img src="dish1.png" alt="Item 1">
+                    <div class="item-info">
+                        <span class="item-name">Item 1</span>
+                        <span class="item-type">Type: Appetizer</span>
+                        
+                        <span class="item-price">Price: $8.99</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <img src="dish2.png" alt="Item 2">
+                    <div class="item-info">
+                        <span class="item-name">Item 2</span>
+                        <span class="item-type">Type: Main Course</span>
+                       
+                        <span class="item-price">Price: $6.99</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <img src="dish3.png" alt="Item 1">
+                    <div class="item-info">
+                        <span class="item-name">Item 3</span>
+                        <span class="item-type">Type: Appetizer</span>
+                        
+                        <span class="item-price">Price: $7.99</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <img src="dish4.png" alt="Item 2">
+                    <div class="item-info">
+                        <span class="item-name">Item 4</span>
+                        <span class="item-type">Type: Main Course</span>
+                       
+                        <span class="item-price">Price: $9.99</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more menu items as needed -->
+        </div>
+
+        <!-- Customer information block -->
+        <div class="customer-info">
+            <h2>Table Booking Info</h2>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" placeholder="Enter your first name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" placeholder="Enter your last name" required>
+
+            <label for="mobile-no">Mobile No:</label>
+            <input type="tel" id="mobile-no" placeholder="Enter your mobile number" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" placeholder="Enter your address" required></textarea>
+
+            <label for="datepicker">Select a Date:</label>
+            <input type="date" id="datepicker" name="datepicker" required>
+
+            <label for="timepicker">Select a Time:</label>
+            <input type="time" id="timepicker" name="timepicker" required>
+
+            <button class="book-table" id="book-table-btn">Book a Table</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>Address: 123 Main St, Cityville</p>
+        <p>Contact: (123) 456-7890</p>
+    </footer>
+
+    <!--<script src="script.js"></script>-->
+    <!-- Add this script tag in your HTML file -->
+    <script>
+        // Function to handle the book table button click
+        function bookTable() {
+            // Check if the form is valid
+            var isValid = validateForm();
+    
+            // If the form is valid, redirect to the table booking page
+            if (isValid) {
+                window.location.href = 'tablebooking.html'; // Replace with the actual file name of your table booking page
+            }
+        }
+    
+        // Function to validate the form
+        function validateForm() {
+            var firstName = document.getElementById('first-name').value;
+            var lastName = document.getElementById('last-name').value;
+            var mobileNo = document.getElementById('mobile-no').value;
+            var address = document.getElementById('address').value;
+            var datepicker = document.getElementById('datepicker').value;
+            var timepicker = document.getElementById('timepicker').value;
+    
+            // Perform your validation logic here
+            // You can add more conditions as needed
+    
+            // Example: Check if any of the required fields is empty
+            if (firstName === '' || lastName === '' || mobileNo === '' || address === '' || datepicker === '' || timepicker === '') {
+                alert('Please fill in all required fields.');
+                return false; // Form is not valid
+            }
+    
+            // Add more validation conditions as needed
+    
+            return true; // Form is valid
+        }
+    
+        // Add event listener to the book table button
+        document.getElementById('book-table-btn').addEventListener('click', bookTable);
+    </script>
+    
+
+</body>
+</html>
